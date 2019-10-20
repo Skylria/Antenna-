@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('api');
+    return view('index');
+});
+
+Route::get('/groups', function () {
+    return view('groups');
+});
+
+Route::get('/groups', function () {
+    return view('medals');
 });
 
 Route::get('/metrics', 'ApiController@getMetrics');

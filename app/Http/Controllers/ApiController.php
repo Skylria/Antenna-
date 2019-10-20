@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     public function index() {
-        // echo "cheguei papai";
-        // die();
+        return view("index");
     }
 
     public function getMetrics(){
@@ -18,22 +17,24 @@ class ApiController extends Controller
         $cep['neighbour'] = "";
 
         $dados = array();
-            $dados['name'] = "";
-            $dados['code'] = "";
-            $dados['cep'] = [
-                $cep['adress'] = "", 
-                $cep['neighbour'] = ""
-            ];
-            $dados['qtdd_alunos'] = "";
-            $dados['pc'] = "";
-            $dados['internet'] = "";
-            $dados['large_band'] = "";
-            $dados['total_func'] = "";
-            $dados['food'] = "";
 
-            $fp = fopen('../public/json/dadosEscolas.json', 'r');
-            $archive = file_get_contents('../public/json/dadosEscolas.json');
-            $decode = json_decode($archive);
+        $fp = fopen('../public/json/dados_Computador.json', 'r');
+        $archive = file_get_contents('../public/json/dados_Computador.json');
+        $decode = json_decode($archive, true);
+        // dd($decode);
+        $decComp = array();
 
+        for ($i = 1; $i <= sizeof($decode); $i++){
+               $decComp = $decode['computadores'];
+        }
+
+        $max = sizeof($decComp);
+        $qtdComp = array_sum($decComp);
+
+        $finalData = $qtdComp / $max;
+
+        $finalData = round($finalData, 2);
+        
+        return view('metrics', ['finalData' => $finalData]);
     }
 }
