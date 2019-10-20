@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('api');
 });
+
+Route::get('/metrics', 'ApiController@getMetrics');

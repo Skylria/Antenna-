@@ -5,51 +5,86 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Nasa Apps</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <style>
-        /* Make the image fully responsive */
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
-        </style>
     </head>
     <body>
-​
-        <div id="demo" class="carousel slide" data-ride="carousel">
-​
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
+        <div class="container-fluid">
+            <header>
+                <nav class="navbar navbar-expand-sm">
+                    <!-- Brand/logo -->
+                    <a class="navbar-brand" href="#">Home</a>
+                    
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="ods-title">
+                    <h1 class=text-center> Qual a sua ODS?</h1>
                 </div>
-                <div class="carousel-item">
-                    <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
+            </header>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/01.jpg')}}" width="100px" height="100px"></a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="ny.jpg" alt="New York" width="1100" height="500">
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/02.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="/metrics"><img src="{{asset('img/03.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/04.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/05.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/06.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/07.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/08.jpg')}}" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href=""><img src="{{asset('img/09.jpg')}}" width="100px" height="100px"></a>
+                    </div>
                 </div>
             </div>
-  
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="group-title">
+                <h1 class="text-center">Prefere encontrar grupos?</h1>
+            </div>
+            
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Procure um grupo por ODS ou ação.">
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
         </div>
-​
-</body>
+    </body>
 </html>
 ​
 
